@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีการสั่งซื้อ</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<script>
+    // ฟังก์ชันเพิ่มสินค้าในตะกร้า
+    let cartCount = 0;
+
+    function addToCart() {
+        cartCount++;
+        document.getElementById('cartCount').textContent = cartCount;
+    }
+</script>
+<style>
+    /* กำหนดฟอนต์สำหรับเว็บไซต์ */
+    body {
+        font-family: 'Prompt', sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #666;
+    }
+
+    .thai-text {
+        font-family: 'Prompt', sans-serif;
+        font-size: 24px;
+        color: #0056b3;
+    }
+</style>
+<style>
+    .step {
+        margin-bottom: 30px;
+    }
+    .step img {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    .step h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .step p {
+        font-size: 16px;
+    }
+</style>
+<style>
+    /* สไตล์สำหรับไอคอนตะกร้า */
+    .cart-icon {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* แสดงจำนวนสินค้า */
+    .cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+</style>
+<body>
+    <!--เมณู -->
+    <nav class="navbar navbar-expand-lg" style="background-color: orange;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LOVE BOOK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="nabook.html">การศึกษา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"  href="nabookneyar.html">นิยาย</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="how_to.html">วิธีการสั่งซื้อ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Callme.html">ติดต่อเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Creator.html">ผู้จัดทำ</a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 20px;">
+                        <img src="./rumpagram/loveBook.png" alt="" style="width:150px;">
+                    </li>
+                    <li class="nav-item" style="margin-left: 20px;">
+                        <div class="cart-icon">
+                            <img src="./rumpagram/cart.png" alt="Cart" style="width:40px;">
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                    </li>
+        
+                </ul>
+                
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">วิธีการสั่งซื้อสินค้า</h2>
+        <br>
+        <div class="row">
+            <!-- ค้นหาสินค้า -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/search.png" alt="ค้นหาสินค้า">
+                <h4>1. ค้นหาสินค้า</h4>
+                <p>ค้นหาสินค้าที่คุณต้องการโดยใช้ฟังก์ชันค้นหาบนเว็บไซต์ของเรา</p>
+            </div>
+            <!-- เลือกสินค้า -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/product.png" alt="เลือกสินค้า">
+                <h4>2. เลือกสินค้า</h4>
+                <p>เลือกสินค้าที่คุณต้องการสั่งซื้อและตรวจสอบรายละเอียดสินค้า</p>
+            </div>
+            <!-- ใส่ตะกร้า -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/add-to-cart.png" alt="ใส่ตะกร้า">
+                <h4>3. ใส่ตะกร้า</h4>
+                <p>เพิ่มสินค้าที่คุณเลือกลงในตะกร้าสินค้าเพื่อดำเนินการสั่งซื้อ</p>
+            </div>
+            <!-- ชำระเงิน -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/payment.png" alt="ชำระเงิน">
+                <h4>4. ชำระเงิน</h4>
+                <p>เลือกวิธีการชำระเงินที่คุณสะดวกและดำเนินการชำระเงิน</p>
+            </div>
+            <!-- แจ้งโอน -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/smartphone.png" alt="แจ้งโอน">
+                <h4>5. แจ้งโอน</h4>
+                <p>ส่งหลักฐานการโอนเงินมาให้เราเพื่อยืนยันการสั่งซื้อ</p>
+            </div>
+            <!-- จัดส่ง -->
+            <div class="col-md-4 step text-center">
+                <img src="./rumpagram/delivery-truck.png" alt="จัดส่ง">
+                <h4>6. จัดส่ง</h4>
+                <p>รอรับสินค้าของคุณที่บ้าน เราจะจัดส่งสินค้าตามที่อยู่ที่คุณระบุ</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
